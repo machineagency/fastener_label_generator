@@ -1,7 +1,8 @@
 from blabel import LabelWriter
 
 label_writer = LabelWriter("item_template.html", default_stylesheets=("style.css",))
-records = [
+
+label_text_entries = [
     {
         "desc": "M3 Flathead Socket Head Cap Screw, 8mm long",
         "vendor": "McMaster-Carr",
@@ -12,4 +13,4 @@ records = [
     # Add more dictionary entries to this list here.
 ]
 
-label_writer.write_labels(records, target="label.pdf")
+label_writer.write_labels(label_text_entries, target="label.pdf")
